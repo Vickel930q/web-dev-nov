@@ -8,6 +8,10 @@ import { IoPersonSharp } from "react-icons/io5";
 import { RiLockPasswordFill } from "react-icons/ri";
 import WarningMessage from "react";
 import { IoEye, IoEyeOff } from 'react-icons/io5';
+import { FaGoogle } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Form() {
     const [firstName, setFirstName] = useState('')
@@ -85,7 +89,7 @@ export default function Form() {
         <div className={styles.container}>
             <form action="" className={styles.form} onSubmit={handleSubmit}>
                 <h2>Login</h2>
-               
+
                 <div className={styles.formgroup}>
                     <label htmlFor="">
                         <MdEmail />
@@ -127,8 +131,8 @@ export default function Form() {
                     {errors.password && <p className={styles.error}>{errors.password}</p>}
 
                 </div>
-                
-                                <button type="submit">Submit</button>
+
+                <button type="submit">Submit</button>
             </form>
             <div className={styles.img}>
                 <Image
@@ -144,13 +148,22 @@ export default function Form() {
                 </div>
 
             </div>
-                <div className={styles.log2}>
-                        <Link href="/signin">
-                            Already have an account?
-                            Log in here!
-                    
-                        </Link>
-                    </div>
+            <div className={styles.log2}>
+                <Link href="/signin">
+                    Already have an account?
+                    Log in here!
+
+                </Link>
+            </div>
+            <section className={styles.options}>
+                <p>sign  in with:</p>
+                <div className={styles.socialmediaicons}>
+                    <FaGoogle />
+                    <FaFacebook />
+                    <BsInstagram />
+                    <FaXTwitter />
+                </div>
+            </section>
         </div>
 
     )
